@@ -1,13 +1,16 @@
 package com.revature.SimpleSpringExample.Domain;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+@Scope(value = "prototype")
 public class Alien {
 
     private int aid;
     private String aname;
     private String tech;
+    private Laptop laptop;
 
     public int getAid() {
         return aid;
@@ -32,9 +35,16 @@ public class Alien {
     public void setTech(String tech) {
         this.tech = tech;
     }
+    public Laptop getLaptop() {
+        return laptop;
+    }
+    public void setLaptop(Laptop laptop) {
+        this.laptop = laptop;
+    }
 
     public void show(){
         System.out.println("I'm in Alien!");
+        laptop.compile();
     }
 
 }

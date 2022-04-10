@@ -1,6 +1,7 @@
 package com.revature.SimpleSpringExample;
 
 import com.revature.SimpleSpringExample.Domain.Alien;
+import com.revature.SimpleSpringExample.Domain.Laptop;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -15,5 +16,4 @@ public class SimpleSpringExampleApplication {
 		Alien a1 = context.getBean(Alien.class);
 		a1.show();
 	}
-
 }
