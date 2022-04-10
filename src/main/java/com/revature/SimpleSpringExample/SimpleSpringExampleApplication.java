@@ -13,6 +13,7 @@ public class SimpleSpringExampleApplication {
 		ConfigurableApplicationContext context = SpringApplication.run(SimpleSpringExampleApplication.class, args);
 
 		Alien a1 = context.getBean(Alien.class);
+		a1.show();
 	}
 
 }
